@@ -1,0 +1,243 @@
+/********************/
+/*  general styles  */
+/********************/
+:root {
+    --primary: #0B0B0F;
+    --secondary: #F6F6F6;
+    --thrid: #121218;
+    --blue: ;
+    --green: ;
+    --red: ;
+    font-size: 13px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+/********************/
+/*    typografy     */
+/********************/
+@font-face {
+    font-family: 'Hellix Semibold';
+    src: local('Hellix Semibold'),
+    local('Hellix-Semibold'),
+    url(font/Hellix-SemiBold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Regular'),
+    local('Inter-Regular'),
+    url(font/Inter-Regular.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'Inter Semibold';
+    src: local('Inter Semibold'),
+    local('Inter-Semibold'),
+    url(font/Inter-Semibold.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'Jetbrains Mono';
+    src: local('JetbrainsMono-Regular'),
+    url(font/JetBrainsMono-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Jetbrains Mono Italic';
+    src: local('JetbrainsMono-Italic'),
+    url(font/JetBrainsMono-Italic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Jetbrains Mono Light';
+    src: local('JetbrainsMono-Light'),
+    url(font/JetBrainsMono-Light.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Jetbrains Mono Light Italic';
+    src: local('JetbrainsMono-LightItalic'),
+    url(font/JetBrainsMono-LightItalic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Jetbrains Mono Semibold';
+    src: local('JetbrainsMono-Semibold'),
+    url(font/JetBrainsMono-SemiBold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Jetbrains Mono Semibold Italic';
+    src: local('JetbrainsMono-SemiboldItalic'),
+    url(font/JetBrainsMono-SemiBoldItalic.woff2) format('woff2');
+}
+/********************/
+/*       text       */
+/********************/
+h1 {
+    font-family: 'Hellix Semibold';
+    font-weight: normal;
+    font-size: 3rem;
+}
+h2 {
+    font-family: 'Hellix Semibold';
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+h3 {
+    font-family: 'JetBrains Mono Regular';
+    font-weight: normal;
+}
+p {
+    font-family: 'Inter';
+    font-size: 1rem;
+}
+span {
+    font-family: 'Jetbrains Mono';
+    font-size: 1.25rem;
+}
+/********************/
+/*       menu       */
+/********************/
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 15vw;
+}
+.menu__option {
+    display: block;
+    padding: 2rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: solid 1px var(--secondary);
+}
+.menu__option:hover {
+    border: 1px solid var(--secondary);
+}
+.menu__home {
+    border-top: 1px solid transparent;
+}
+.menu__afn:hover,
+.menu__lex:hover {
+    border-top: none;
+}
+/********************/
+/*    container     */
+/********************/
+.container {
+    display: block;
+    width: 85vw;
+}
+.container__tab {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+#Afn {
+    display: block;
+}
+/********************/
+/*     buttons      */
+/********************/
+button, input[type=button] {
+    outline: none;
+    padding: .75rem 2.5rem;
+    border: 1px solid var(--secondary);
+    background-color: transparent;
+    color: var(--secondary);
+    cursor: pointer;
+    font-family: 'Inter Semibold';
+    transition: all 0.4s ease-in-out;
+}
+button:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+button.btn__active,
+input[type=button].btn__active {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+a,
+.btn__link {
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .75rem 2.5rem;
+    background-color: transparent;
+    color: var(--secondary);
+    font-family: 'Inter Semibold';
+}
+/********************/
+/*       card       */
+/********************/
+.card {
+    padding: 1.5rem;
+    border: 1px solid var(--secondary);
+}
+.card__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.card__head span {
+    display: block;
+    padding: .5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.card__head h2 {
+    font-family: 'Inter Semibold';
+    font-size: 1.75rem;
+}
+.card__body {}
+
+/********************/
+/*       home       */
+/********************/
+.container__center {
+    text-align: center;
+}
+.t__title {
+    font-size: 7rem;
+}
+.t__subtitle {
+    font-size: 3rem;
+}
+
+/********************/
+/*       afn        */
+/********************/
+.container__tab__flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#afn__options {
+    width: 60%;
+    padding: 2rem 13rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+#afn__form {
+    display: block;
+    width: 40%;
+    height: 100%;
+    background-color: var(--thrid);
+}

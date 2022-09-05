@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiladores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- menu -->
+    <div class="menu">
+        <div>
+            <div id="HomeLink" class="menu__option menu__home">
+                <h3 class="mb-0">01.</h3>
+                <h2 class="mb-0">Inicio</h2>
+            </div>
+            <div id="AfnLink" class="menu__option menu__afn">
+                <h3 class="mb-0">02.</h3>
+                <h2 class="mb-0">AFN</h2>
+            </div>
+            <div id="LexLink" class="menu__option menu__lex">
+                <h3 class="mb-0">03.</h3>
+                <h2 class="mb-0">Anál. léxico</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- containers -->
+    <div class="container">
+        <div id="Home" class="container__tab">
+            <div class="container__center">
+                <h1 class="t__title">Compiladores</h1>
+                <h3 class="t__subtitle">Proyecto final</h3>
+                <br><br><br><br>
+                <p class="t__info">
+                    Desarrollo <br>
+                    <span>Alan Delgado</span> <br><br>
+                    Repositorio <br>
+                    <a href="https://github.com/AlaniD19/Compiladores"><span>github/AlaniD19</span></a>
+                </p>
+            </div>
+        </div>
+        <div id="Afn" class="container__tab">
+            <div class="container__tab__flex">
+                <div id="afn__options">
+                    <!-- basic -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Básico</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Crea un AFN básico</h3>
+                        </div>
+                    </div>
+                    <!-- union -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Unir</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Une dos AFN's</h3>
+                        </div>
+                    </div>
+                    <!-- cancat -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Concatenar</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Concatena dos AFN's</h3>
+                        </div>
+                    </div>
+                    <!-- c+ -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Cerradura +</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Aplica cerradura transitiva</h3>
+                        </div>
+                    </div>
+                    <!-- c* -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Cerradura &#9913;</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Aplica cerradura estrella</h3>
+                        </div>
+                    </div>
+                    <!-- optional -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Opcional</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Aplica la operación opcional</h3>
+                        </div>
+                    </div>
+                    <!-- er to afn -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>e.r. -> AFN</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Genera un AFN desde una e.r.</h3>
+                        </div>
+                    </div>
+                    <!-- union to lexical analysis -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Unión para A.L.</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Une AFN's para su análisis</h3>
+                        </div>
+                    </div>
+                    <!-- afn to afd -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>AFN -> AFD</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Convierte un AFN a su AFD</h3>
+                        </div>
+                    </div>
+                    <!-- string analysis -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Analizar una cadena</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Analiza una cadena de entrada</h3>
+                        </div>
+                    </div>
+                    <!-- lexical analysis test -->
+                    <div class="card" id="">
+                        <div class="card__head">
+                            <span><i class="icon icon-"></i></span>
+                            <h2>Probar A.L.</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Prueba el analizador léxico</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="afn__form">
+    
+                </div>
+            </div>
+        </div>
+        <div id="Lex" class="container__tab">
+            <div class="container__center">
+                <h1 class="t__title">Analizador léxico</h1>
+                <h3 class="t__subtitle">Proximanete</h3>
+                <br><br><br><br>
+                <p class="t__info">
+                    <span>En desarrollo...</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="tabs.js"></script>
+</body>
+</html>

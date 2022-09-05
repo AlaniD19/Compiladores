@@ -1,0 +1,7 @@
+-- generar el script para el AFN
+-- seleccionar los icons para las cards
+-- generar los forms con los automatas en css
+-- generar el script para el cabio de forms
+-- activar el local storage
+-- selecionar los colores para las cards
+-- agregar el :hover en las cards
