@@ -2,12 +2,15 @@
 /*  general styles  */
 /********************/
 :root {
-    --primary: #0B0B0F;
+    --primary: #121315;
     --secondary: #F6F6F6;
-    --thrid: #121218;
-    --blue: ;
-    --green: ;
-    --red: ;
+    --thrid: #141819;
+    --gray: #333f41;
+    --blue: #88ACEE;
+    --green: #84CC83;
+    --pink: #CA6CDC;
+    --orange: #E18E77;
+    --purple: #A285EB;
     font-size: 13px;
 }
 * {
@@ -161,10 +164,6 @@ button, input[type=button] {
     font-family: 'Inter Semibold';
     transition: all 0.4s ease-in-out;
 }
-button:hover {
-    color: var(--primary);
-    background-color: var(--secondary);
-}
 button.btn__active,
 input[type=button].btn__active {
     background-color: var(--secondary);
@@ -180,11 +179,23 @@ a,
     color: var(--secondary);
     font-family: 'Inter Semibold';
 }
+.btn__block {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.btn__block button {
+    width: 45%;
+}
 /********************/
 /*       card       */
 /********************/
 .card {
     padding: 1.5rem;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+}
+.card:hover {
     border: 1px solid var(--secondary);
 }
 .card__head {
@@ -192,19 +203,38 @@ a,
     align-items: center;
     margin-bottom: 3rem;
 }
+.card__head .icon {
+    display: block;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+.card:nth-child(5n-4) .card__head .icon {
+    background-color: var(--blue);
+}
+.card:nth-child(5n-3) .card__head .icon {
+    background-color: var(--purple);
+}
+.card:nth-child(5n-2) .card__head .icon {
+    background-color: var(--green);
+}
+.card:nth-child(5n-1) .card__head .icon {
+    background-color: var(--orange);
+}
+.card:nth-child(5n) .card__head .icon {
+    background-color: var(--pink);
+}
 .card__head span {
     display: block;
-    padding: .5rem;
+    padding: .25rem;
     border-radius: 50%;
     font-size: 2rem;
-    margin-right: 1rem;
+    margin-right: .5rem;
 }
 .card__head h2 {
     font-family: 'Inter Semibold';
     font-size: 1.75rem;
 }
-.card__body {}
-
 /********************/
 /*       home       */
 /********************/
@@ -217,7 +247,6 @@ a,
 .t__subtitle {
     font-size: 3rem;
 }
-
 /********************/
 /*       afn        */
 /********************/
@@ -236,8 +265,100 @@ a,
     grid-row-gap: 2rem;
 }
 #afn__form {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40%;
     height: 100%;
     background-color: var(--thrid);
+    text-align: center;
+}
+
+/********************/
+/*      form        */
+/********************/
+#afn__form .form {
+    display: block;
+    width: 80%;
+}
+#afn__form .form__container {
+    display: block;
+    width: 100%;
+}
+#afn__form input[type=text] {
+    font-family: 'Jetbrains Mono';
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--secondary);
+    background-color: transparent;
+    text-align: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    width: 10rem;
+
+}
+#afn__form input[type=text]::placeholder {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+#afn__form input[type=text]:valid {
+    border-bottom: 1px solid transparent;
+}
+
+
+
+/********************/
+/*    afn graphs    */
+/********************/
+.afn__basic {
+    margin: -1.5rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.afn__basic div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 5px solid var(--blue);
+    position: relative;
+}
+.afn__basic div:last-child::before {
+    content: '';
+    display: block;
+    background-color: var(--blue);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.afn__basic i {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 15rem;
+    height: 2px;
+    border: 2px solid var(--secondary);
+    position: relative;
+}
+.afn__basic i::before, 
+.afn__basic i::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: 2px solid var(--secondary);
+    width: 1rem;
+}
+.afn__basic i::before {
+    transform: rotate(45deg);
+    right: -.25rem;
+    top: -.6rem;
+}
+.afn__basic i::after {
+    transform: rotate(-45deg);
+    right: -.25rem;
+    top: .4rem;
 }
